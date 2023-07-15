@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: react-lluvatar
+spec:
+  template:
+    metadata:
+      name: react-lluvatar-shopifyenv-pod
+    spec:
+      containers:
+      - name: react-lluvatar-docker
+        image: arda/react-lluvatar
+        imagePullPolicy: Never
+      restartPolicy: Never
